@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo imc</title>
+    <style>
+        form{
+            font: normal 15px arial ;
+            color: white;
+            border:  groove 1px ; 
+            border-radius: 5%;  
+            width: 400px;
+            background: rgb(249, 177, 43) ;     
+            
+            padding-left: 20px;
+            padding-bottom: 30px;
+        }
+         input#alt{
+             display: block;
+            margin-top: 5px;
+            border-radius: 3px;
+            border-width: 0.3px;
+            
+        }
+        input#ps{
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            border-width: 0.3px;
+            
+            
+        }
+        div#resu{
+            font: normal 15px arial ;
+            color: black;
+            background: white;
+            border: groove;
+            border-width: 0.5px;
+            width: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        input#cal,#re{
+            border-radius: 8px;
+            border-width: 0.3px;
+            margin-right: 8px ;
+
+        }
+        input#cal{
+            background: rgb(141, 216, 29);
+            height: 50px;
+            margin-bottom: 10px;
+            box-shadow: 3px 1px;
+            
+        }
+        input#re{
+            background: rgb(223, 213, 213);
+            height: 50px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <h1>Calculadora de IMC</h1>
+    <label for="'alt'">Digite sua altura</label>
+    <input type="number" name="alt" id="alt" placeholder="Altura em cm. ex: 1,75"> <br>
+    <label for="ps">Digite seu peso</label>
+    <input type="number" name="ps" id="ps" placeholder="Peso em Kg">
+    <input type="button" onclick="calcular()" value="CALCULAR" id="cal">
+    <input type="reset" value="LIMPAR" id="re">
+    <div id="resu">RESULTADO</div>
+    
+    </form>
+
+    <Script>
+        function calcular() {
+        var alt1 = document.getElementById('alt')
+        var ps1 = document.getElementById('ps')
+        var alt2 = parseFloat(alt1.value)
+        var ps2 =  parseFloat(ps1.value)
+        
+            var res = ps2 / alt2**2 
+            var res1 = res.toFixed(2)
+            resu.innerHTML = `${res1}`
+        }
+    </Script>
+
+     
+    
+    
+</body>
+</html>
