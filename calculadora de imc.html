@@ -76,8 +76,9 @@
     <label for="ps">Digite seu peso</label>
     <input type="number" name="ps" id="ps" placeholder="Peso em Kg">
     <input type="button" onclick="calcular()" value="CALCULAR" id="cal">
-    <input type="reset" value="LIMPAR" id="re">
+    <input type="reset" value="LIMPAR" id="re" onclick="limpar()">
     <div id="resu">RESULTADO</div>
+    <div id="grau">  </div>
     
     </form>
 
@@ -91,7 +92,34 @@
             var res = ps2 / alt2**2 
             var res1 = res.toFixed(2)
             resu.innerHTML = `${res1}`
+            
+            if (res1 < 18.50) {
+           document.getElementById('grau').innerHTML = "Abaixo do normal"
+            
+        } else if (res1 <= 24.90) { 
+            document.getElementById('grau').innerHTML = "Peso normal"            
+        } else if (res1 <= 29.90) {
+            document.getElementById("grau").innerHTML = "Sobrepeso"
+            
+        }  
+        else if (res1 <= 34.90) {
+            document.getElementById('grau').innerHTML = "Obesidade Grau I"            
+        } else if (res1 <= 39.90) {
+            document.getElementById("grau").innerHTML = "Obesidade Grau II"            
+        } else {
+            document.getElementById("grau").innerHTML = "Obesidade Grau III"
+            
+            
         }
+        }
+
+        function limpar() {
+            document.getElementById("grau").innerHTML =""
+            document.getElementById("resu").innerHTML ="Calcule Novamete"
+            
+        }
+         
+       
     </Script>
 
      
