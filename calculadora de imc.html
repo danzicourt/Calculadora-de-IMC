@@ -11,7 +11,7 @@
             border:  groove 1px ; 
             border-radius: 5%;  
             width: 400px;
-            background: rgb(249, 177, 43) ;     
+            background: rgba(74, 187, 8, 0.918) ;     
             
             padding-left: 20px;
             padding-bottom: 30px;
@@ -52,16 +52,17 @@
 
         }
         input#cal{
-            background: rgb(141, 216, 29);
+            background: rgba(255, 166, 0, 0.945);
             height: 50px;
             margin-bottom: 10px;
-            box-shadow: 3px 1px 5px;
+            margin-right: 15px;
+            box-shadow: 2px 1px 10px;
             
         }
         input#re{
-            background: rgb(223, 213, 213);
+            background: rgba(236, 44, 44, 0.959);
             height: 50px;
-            box-shadow: 3px 1px 5px;
+            box-shadow: 2px 1px 10px;
         }
 
 
@@ -76,13 +77,20 @@
     <label for="'alt'">Digite sua altura</label>
     <input type="number" name="alt" id="alt" placeholder="Altura em cm. ex: 1,75"> <br>
     <label for="ps">Digite seu peso</label>
-    <input type="number" name="ps" id="ps" placeholder="Peso em Kg">
+    <input type="number" name="ps" id="ps" placeholder="Peso em Kg ex: 75">
     <input type="button" onclick="calcular()" value="CALCULAR" id="cal">
     <input type="reset" value="LIMPAR" id="re" onclick="limpar()">
     <div id="resu">RESULTADO</div>
     <div id="grau">  </div>
+
+    <p> &copy; danzicourt </p>
     
     </form>
+    <footer>
+       
+
+    </footer>
+    
 
     <Script>
         function calcular() {
